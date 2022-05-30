@@ -144,6 +144,49 @@ namespace VideoStore.Wipro.BLL
                 }
             }           
         }
+        public string ReturnRentedMovie(ReturnMovieInputModel request)
+        {
+            try
+            {               
+                CheckDate(request.ReturnDate);
+                var result = CheckReturnDateMovie(request);               
+
+                return result + "Movie returned successfully";
+            }
+            catch (Exception e)
+            {
+                return e.Message.ToString();
+            }
+
+        }
+
+        private string CheckReturnDateMovie(ReturnMovieInputModel request)
+        {
+            string result = "";
+            var ListRentMovies = _rentMovieModel.GetAllRentMovies();
+            if (ListRentMovies.Any())
+            {
+                var verifyList = ListRentMovies.Where(x => x.CdMovie == request.CdMovie && x.ActiveRent == true);
+                if (verifyList.Any())
+                {
+                    var data = verifyList.First();
+                    int checkDate = DateTime.Compare(request.ReturnDate, data.ReturnDate);
+                    data.ActiveRent = false;                    
+                    if (checkDate > 0)
+                    {
+                        var daysLate = request.ReturnDate - data.ReturnDate ;
+                        result = "Attention, movie " + daysLate.Days +  " days late return\n";
+                    }                    
+
+                }
+            }
+            else
+            {
+                throw new Exception(message: "Rent not found");
+            }
+            return result;
+
+        }
         public List<ClientModel> GetAllClients()
         {           
             return _clientModel.GetAllClients();

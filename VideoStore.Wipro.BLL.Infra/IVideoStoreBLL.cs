@@ -13,5 +13,6 @@ namespace VideoStore.Wipro.BLL.Infra
         List<MovieModel> GetAllMovies();
         string RentMovie(RentMovieInputModel request);
         List<RentMovieModel> GetAllRentMovies();
+        string ReturnRentedMovie(ReturnMovieInputModel request);
     }
 }

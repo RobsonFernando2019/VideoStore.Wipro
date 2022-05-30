@@ -22,7 +22,7 @@ namespace VideoStore.Wipro.BLL.Infra.Model
         public DateTime StartRent { get; set; } 
         public DateTime ReturnDate { get; set; } 
 
-        private static readonly List<RentMovieModel> Rents = new();
+        public static readonly List<RentMovieModel> Rents = new();
 
         public void SaveRent(RentMovieModel rent)
         {
@@ -32,6 +32,6 @@ namespace VideoStore.Wipro.BLL.Infra.Model
         public List<RentMovieModel> GetAllRentMovies()
         {
             return RentMovieModel.Rents;
-        }
+        }       
     }
 }

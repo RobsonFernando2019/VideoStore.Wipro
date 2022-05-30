@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VideoStore.Wipro.Infra;
+using VideoStore.Wipro.Infra.AutoMapper;
 
 namespace VideoStore.Wipro
 {
@@ -26,7 +28,8 @@ namespace VideoStore.Wipro
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddWebAPIServices(Configuration);
+            services.AddMapperProfiles();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

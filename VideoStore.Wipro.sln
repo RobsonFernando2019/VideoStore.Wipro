@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore.Wipro", "VideoStore.Wipro\VideoStore.Wipro.csproj", "{8EBEB05D-DA38-465C-958A-6B4207845DFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore.Wipro.BLL", "VideoStore.Wipro.BLL\VideoStore.Wipro.BLL.csproj", "{2C87017E-34C8-4B5D-985D-7CB7B301F878}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BD48053-8DAD-4BD0-9246-590420A0E1C3} = {1BD48053-8DAD-4BD0-9246-590420A0E1C3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore.Wipro.BLL.Infra", "VideoStore.Wipro.BLL.Infra\VideoStore.Wipro.BLL.Infra.csproj", "{1BD48053-8DAD-4BD0-9246-590420A0E1C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,14 @@ Global
 		{8EBEB05D-DA38-465C-958A-6B4207845DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EBEB05D-DA38-465C-958A-6B4207845DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EBEB05D-DA38-465C-958A-6B4207845DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C87017E-34C8-4B5D-985D-7CB7B301F878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C87017E-34C8-4B5D-985D-7CB7B301F878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C87017E-34C8-4B5D-985D-7CB7B301F878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C87017E-34C8-4B5D-985D-7CB7B301F878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD48053-8DAD-4BD0-9246-590420A0E1C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD48053-8DAD-4BD0-9246-590420A0E1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD48053-8DAD-4BD0-9246-590420A0E1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD48053-8DAD-4BD0-9246-590420A0E1C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
